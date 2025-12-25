@@ -5,6 +5,8 @@ junit = "5.11.4"
 dokka = "2.0.0"
 maven-publish = "0.30.0"
 detekt = "1.23.7"
+jmh = "1.37"
+jmh-plugin = "0.7.2"
 
 [libraries]
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
@@ -16,3 +18,4 @@ kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", versi
 dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "maven-publish" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+jmh = { id = "me.champeau.jmh", version.ref = "jmh-plugin" }

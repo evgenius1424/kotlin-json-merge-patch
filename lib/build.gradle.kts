@@ -8,6 +8,7 @@ plugins {
     alias(libs.plugins.maven.publish)
     alias(libs.plugins.detekt)
     alias(libs.plugins.dokka)
+    alias(libs.plugins.jmh)
 }
 
 group = "io.github.evgenius1424"
@@ -114,4 +115,16 @@ mavenPublishing {
 tasks.dokkaGeneratePublicationHtml {
     generator.moduleName.set("Kotlin JSON Merge Patch")
     generator.moduleVersion.set(project.version.toString())
+}
+
+jmh {
+    jmhVersion.set("1.37")
+    warmupIterations.set(5)
+    iterations.set(10)
+    fork.set(3)
+    benchmarkMode.set(listOf("thrpt", "avgt"))
+    timeUnit.set("us")
+    resultFormat.set("JSON")
+    resultsFile.set(project.layout.buildDirectory.file("reports/jmh/results.json"))
+    includes.set(listOf(".*Benchmark.*"))
 }
