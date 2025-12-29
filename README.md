@@ -10,7 +10,7 @@ A **lightweight**, **high-performance** Kotlin library implementing [RFC 7396](h
 ## Installation
 
 ```kotlin
-implementation("io.github.evgenius1424:kotlin-json-merge-patch:VERSION")
+implementation("io.github.evgenius1424:kotlin-json-merge-patch:1.0.0")
 ```
 
 ## Usage
